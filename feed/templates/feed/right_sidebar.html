@@ -1,0 +1,24 @@
+{% load static %}
+{% block right_sidebar %}
+<div class="right_sidebar_iner">
+                    <a href="#">
+                        <img src="{% static 'images/advertis-2.jpg' %}" alt="" class="responsive-img">
+                    </a>
+                    <div class="popular_posts">
+                        <h3 class="categories_tittle">Popular Posts</h3>
+                        {% for post in posts %}
+                            <div class="row valign-wrapper popular_item">
+                                <div class="col s3 p_img">
+                                    <a href="{% url 'post-detail' post.id %}">
+                                        <img src="{{ post.pic.url }}" alt="" class="circle responsive-img">
+                                    </a>
+                                </div>
+                                <div class="col s9 p_content">
+                                    <a href="#">{{ post.description | truncatechars:50 }}</a>
+                                    <span class="black_text">{{ post.date_posted | date:'F j, Y, g:i a' }}</span>
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+{% endblock %}

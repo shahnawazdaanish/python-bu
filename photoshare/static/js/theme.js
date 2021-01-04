@@ -43,7 +43,7 @@
     
     // Loding next
     function infiniteScroll() {
-        if ($('.middle_section, .notifications_area').length) {
+        /*if ($('.middle_section, .notifications_area').length) {
            $('.middle_section').jscroll({
                 loadingHtml: '<img src="images/preloader.svg" alt="Loading" />',
                 padding: 0, 
@@ -60,7 +60,7 @@
                 contentSelector: '.notifications_content li', 
                 callback: false, 
            }); 
-        }
+        }*/
     }
     
     //* Check button  

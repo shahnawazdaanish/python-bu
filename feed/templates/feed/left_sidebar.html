@@ -1,0 +1,32 @@
+{% load static %}
+{% block left_sidebar %}
+<div class="left_side_bar" style="min-width: 320px">
+                    <div class="interests">
+                        <h3 class="categories_tittle">Your Interests</h3>
+                        <ul class="interests_list">
+
+                            {% for post in liked_post %}
+                                {% if post.tags != "" %}
+                                    <li><a href="#"><i class="ion-android-radio-button-off"></i>{{ post.tags }}</a></li>
+                                {% endif %}
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    <div class="profile">
+                        <h3 class="categories_tittle">Friends</h3>
+                        <ul class="profile_pic">
+                            {% if friends.count > 0 %}
+                                {% for friend in friends %}
+                                    <li><a href="#"><img style="width: 46px; height: 47px;" src="{{ friend.image.url }}"
+                                                         alt=""
+                                                         class="circle"></a></li>
+                                {% endfor %}
+                            {% else %}
+                                <li><a href="#"><img src="{% static 'images/profile-1.jpg' %}" alt=""
+                                                     class="circle"></a></li>
+                            {% endif %}
+
+                        </ul>
+                    </div>
+                </div>
+{% endblock %}

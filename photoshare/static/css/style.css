@@ -4027,10 +4027,22 @@ nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
 /*--------- CUSTOM CSS ------------*/
 
 .card-signin .card-body {
-  padding: 15px 20px;
+  padding: 20px 15px;
+}
+.card-signin.my-5 {
+  margin-top: 50px;
 }
 
 .card-signin .card-title {
     margin-bottom: 20px;
     text-align: center;
+}
+
+.card-signin > a  {
+  text-align: center;
+  display: block;
+}
+
+.my-5 {
+  padding: 15px 20px;
 }
